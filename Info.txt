@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+"""
+╔══════════════════════════════════════════════════════════════════╗
+║         JOLLIBEE POINT OF SALE SYSTEM  v2.0                      ║
+║         Enhanced Security Edition                                ║
+╠══════════════════════════════════════════════════════════════════╣
+║   Default Credentials                                            ║
+║   ─────────────────────────────────────────────────────────────  ║
+║   Admin   │  admin     │  Admin@123                               ║
+║   Cashier │  cashier1  │  Cashier@123                             ║
+║   Cashier │  cashier2  │  Cashier@123                             ║
+╠══════════════════════════════════════════════════════════════════╣
+║   Security Features                                              ║
+║   • PBKDF2-HMAC-SHA256  (200,000 iterations)                      ║
+║   • 64-byte cryptographic salt per user                          ║
+║   • Account lockout: 5 failed attempts → 5-min cooldown          ║
+║   • Constant-time password comparison (timing-attack safe)       ║
+╚══════════════════════════════════════════════════════════════════╝
+
+  Requirements: Python 3.8+, tkinter (bundled with most Python installs)
+  Run:          python3 jollibee_pos.py
+"""
