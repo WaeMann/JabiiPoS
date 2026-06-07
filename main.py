@@ -574,12 +574,27 @@ class POSFrame(tk.Frame):
     def _build_header(self):
         hdr = tk.Frame(self, bg=RED)
         hdr.pack(fill="x", side="top")
+        logo_img = Image.open("JollibeeMascot.png")
+        logo_img = logo_img.resize((45, 45))  # Adjust size for header
+        self.logo_photo = ImageTk.PhotoImage(logo_img)
 
         # Left
         left = tk.Frame(hdr, bg=RED)
         left.pack(side="left", padx=14, pady=8)
-        tk.Label(left, text="🍔  JOLLIBEE POS",
-                 font=("Helvetica", 15, "bold"), bg=RED, fg=WHITE).pack(side="left")
+        tk.Label(
+            left,
+            image=self.logo_photo,
+            bg=RED
+        ).pack(side="left", padx=(0, 6))
+
+        # Title
+        tk.Label(
+            left,
+            text="Jollibee",
+            font=("Helvetica", 15, "bold"),
+            bg=RED,
+            fg=WHITE
+        ).pack(side="left")
         tk.Label(left, text=f"  │  {STORE_INFO['branch']}",
                  font=("Helvetica", 10), bg=RED, fg="#FFBBBB").pack(side="left")
 

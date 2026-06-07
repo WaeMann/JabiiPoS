@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6e90919d-d03a-4466-9e2b-703e601d9ee5" name="Changes" comment="Read info.txt for more details.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jollibee_pos.db" beforeDir="false" afterPath="$PROJECT_DIR$/jollibee_pos.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +79,23 @@
       <option name="project" value="LOCAL" />
       <updated>1780802361378</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Read info.txt for more details.">
+      <option name="closed" value="true" />
+      <created>1780803549258</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1780803549258</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Read info.txt for more details.">
+      <option name="closed" value="true" />
+      <created>1780803597852</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1780803597852</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,7 +110,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>888</line>
+          <line>903</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
