@@ -5,6 +5,7 @@ import hashlib
 import secrets
 import time
 import datetime
+from PIL import Image, ImageTk
 import os
 
 # ══════════════════════════════════════════════════════════════════
@@ -409,12 +410,15 @@ class LoginFrame(tk.Frame):
         logo_f = tk.Frame(card, bg=WHITE)
         logo_f.pack(pady=(0, 22))
 
-        tk.Label(logo_f, text="🍔", font=("Helvetica", 52), bg=WHITE, fg=RED).pack()
-        tk.Label(logo_f, text="JOLLIBEE", font=("Helvetica", 26, "bold"), bg=WHITE, fg=RED).pack()
-        tk.Label(logo_f, text="Point of Sale System",
-                 font=("Helvetica", 11), bg=WHITE, fg=GRAY).pack()
+        logo_img = Image.open("JollibeeLogo.png")  # Path to your PNG
+        logo_img = logo_img.resize((100, 100))  # Adjust size as needed
+        self.logo_photo = ImageTk.PhotoImage(logo_img)
 
-        ttk.Separator(card, orient="horizontal").pack(fill="x", pady=20)
+        tk.Label(
+            logo_f,
+            image=self.logo_photo,
+            bg=WHITE
+        ).pack()
 
         # ── Form ────────────────────────────────────────────────
         form = tk.Frame(card, bg=WHITE)
@@ -464,9 +468,6 @@ class LoginFrame(tk.Frame):
             relief="flat", cursor="hand2",
             command=self._do_login, pady=11, width=28)
         self._login_btn.pack(pady=(16, 0))
-
-        tk.Label(form, text="Default: admin / Admin@123",
-                 font=("Helvetica", 8), bg=WHITE, fg="#CCCCCC").pack(pady=(10, 0))
 
         # Key bindings
         self.bind_all("<Return>", lambda e: self._do_login())
