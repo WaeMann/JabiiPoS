@@ -5,6 +5,7 @@
    Admin   │  admin     │  Admin@123
    Cashier │  cashier1  │  Cashier@123
    Cashier │  cashier2  │  Cashier@123
+   Admin   │  Yngel     │  Cutie@123
 Security Features
 - PBKDF2-HMAC-SHA256  (200,000 iterations)
 - 64-byte cryptographic salt per user
