@@ -23,16 +23,17 @@ INSTRUCTIONS
 
 1. Download, copy, or share the file from github: https://github.com/WaeMann/JabiiPoS.git
 
-2. Create/add local python interpreter on your IDE.
+2. Extract the zip file then open the Folder on your IDE.
+
+3. Create/add local python interpreter on your IDE.
 settings > python > interpreter > add/create local interpreter
 
-3. Install the graphic modules/GUI toolkits/Database connector on your terminals
+4. Install the graphic modules/GUI toolkits/Database connector on your terminals
 if you haven't installed yet
 
 pip install tk
 pip install pillow
 
-4. Run the file main.py.
+5. Run the file main.py.
 
-5.
 ══════════════════════════════════════════════════════════════════
