@@ -1,22 +1,38 @@
-#!/usr/bin/env python3
-"""
-╔══════════════════════════════════════════════════════════════════╗
-║         JOLLIBEE POINT OF SALE SYSTEM  v2.0                      ║
-║         Enhanced Security Edition                                ║
-╠══════════════════════════════════════════════════════════════════╣
-║   Default Credentials                                            ║
-║   ─────────────────────────────────────────────────────────────  ║
-║   Admin   │  admin     │  Admin@123                               ║
-║   Cashier │  cashier1  │  Cashier@123                             ║
-║   Cashier │  cashier2  │  Cashier@123                             ║
-╠══════════════════════════════════════════════════════════════════╣
-║   Security Features                                              ║
-║   • PBKDF2-HMAC-SHA256  (200,000 iterations)                      ║
-║   • 64-byte cryptographic salt per user                          ║
-║   • Account lockout: 5 failed attempts → 5-min cooldown          ║
-║   • Constant-time password comparison (timing-attack safe)       ║
-╚══════════════════════════════════════════════════════════════════╝
+         JOLLIBEE POINT OF SALE SYSTEM  v2.0
+         Enhanced Security Edition
+══════════════════════════════════════════════════════════════════
+   Default Credentials
+   Admin   │  admin     │  Admin@123
+   Cashier │  cashier1  │  Cashier@123
+   Cashier │  cashier2  │  Cashier@123
+Security Features
+- PBKDF2-HMAC-SHA256  (200,000 iterations)
+- 64-byte cryptographic salt per user
+- Account lockout: 5 failed attempts → 5-min cooldown
+- Constant-time password comparison (timing-attack safe)
+- Unique session IDs
+- Logout type tracking
+- Audit on order placement or user unlock
 
-  Requirements: Python 3.8+, tkinter (bundled with most Python installs)
-  Run:          python3 jollibee_pos.py
-"""
+  Requirements: Python 3.8+, tkinter (pip install )
+  Run:          python3 main.py
+
+══════════════════════════════════════════════════════════════════
+
+INSTRUCTIONS
+
+1. Download, copy, or share the file from github: https://github.com/WaeMann/JabiiPoS.git
+
+2. Create/add local python interpreter on your IDE.
+settings > python > interpreter > add/create local interpreter
+
+3. Install the graphic modules/GUI toolkits/Database connector on your terminals
+if you haven't installed yet
+
+pip install tk
+pip install pillow
+
+4. Run the file main.py.
+
+5.
+══════════════════════════════════════════════════════════════════
