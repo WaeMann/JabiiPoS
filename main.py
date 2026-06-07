@@ -350,16 +350,8 @@ class App(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title(APP_TITLE)
-        self.geometry("1300x780")
-        self.minsize(1100, 700)
-        self.configure(bg=BG)
-
-        # Center window on screen
-        self.update_idletasks()
-        sw, sh = self.winfo_screenwidth(), self.winfo_screenheight()
-        x = (sw - 1300) // 2
-        y = (sh -  780) // 2
-        self.geometry(f"+{max(0, x)}+{max(0, y)}")
+        self.state("zoomed")
+        self.overrideredirect(True)
 
         self.db   = Database()
         self.auth = AuthManager(self.db)
@@ -435,7 +427,7 @@ class LoginFrame(tk.Frame):
         self._uname_e = tk.Entry(
             form, textvariable=self._uname, font=F_BODY,
             relief="solid", bd=1, width=30, bg=WHITE)
-        self._uname_e.pack(ipady=8, pady=(0, 14))
+        self._uname_e.pack(fill="x", ipady=8, pady=(0, 14))
 
         # Password
         tk.Label(form, text="Password", font=F_H3, bg=WHITE, fg=BLACK, anchor="w").pack(
@@ -1138,12 +1130,17 @@ class PaymentDialog(tk.Toplevel):
 
         self.title("Process Payment")
         self.configure(bg=WHITE)
-        self.resizable(False, False)
-        self.grab_set()
-
-        h = 570 if method == "Cash" else 330
-        self.geometry(f"390x{h}")
         self.update_idletasks()
+        self.grab_set()
+        self.resizable(False, False)
+
+        self.update_idletasks()
+
+        w = 430
+        h = 700 if method == "Cash" else 400
+
+        self.geometry(f"{w}x{h}")
+        self.minsize(w, h)
         x = parent.winfo_x() + (parent.winfo_width()  - 390) // 2
         y = parent.winfo_y() + (parent.winfo_height() - h)   // 2
         self.geometry(f"+{max(0,x)}+{max(0,y)}")
@@ -1322,6 +1319,7 @@ class ReceiptWindow(tk.Toplevel):
         self.title(f"Receipt – {order_data['order_num']}")
         self.configure(bg=WHITE)
         self.resizable(False, True)
+        self.overrideredirect(True)
 
         w, h = 430, 600
         x = parent.winfo_x() + (parent.winfo_width()  - w) // 2
@@ -1440,6 +1438,7 @@ class AdminPanel(tk.Toplevel):
         super().__init__(parent)
         self.db   = db
         self.auth = auth
+        self.overrideredirect(True)
 
         self.title("Admin Panel – Jollibee POS")
         self.configure(bg=BG)
@@ -1562,6 +1561,7 @@ class AdminPanel(tk.Toplevel):
         items = self.db.get_order_items(oid)
 
         win = tk.Toplevel(self)
+        self.overrideredirect(True)
         win.title(f"Order Detail – {order['order_num']}")
         win.configure(bg=WHITE)
         win.geometry("440x540")
