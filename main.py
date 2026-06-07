@@ -220,7 +220,7 @@ class Database:
                     ("admin",    "Admin@123",   "admin"),
                     ("cashier1", "Cashier@123", "cashier"),
                     ("cashier2", "Cashier@123", "cashier"),
-                    ("Yngel",    "Cutie@123",   "admin")
+                    ("Yngel",    "Cutie@123",   "admin"),
                 ]
                 for uname, pwd, role in seed:
                     salt  = secrets.token_hex(32)
